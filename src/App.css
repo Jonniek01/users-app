@@ -14,7 +14,8 @@
   height: 80%;
   display: grid;
   grid-template-columns: repeat(5,1fr);
-  background-color: aqua;
+  gap: 3px;
+
 
 }
 .heading{
@@ -23,12 +24,81 @@
 }
 .user-card{
   background-color: aliceblue;
-  height: 50%;
+  text-align: left;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
 
 
 }
+.user-card:hover{
+  opacity: 0.5;
+}
+.p1{
+  color: rgb(235, 36, 69);
+}
+.u-name{
+ font-weight: bold;
+}
+.overlay-none{
+  display: none;
+}
+.overlay-show{
+  display: block;
+  position: fixed;
+  background-color: white;
+  height: 80%;
+  width: 80%;
+ 
+}
 
 /*Media devices*/
+@media only screen and (max-width: 1000px) {
+  .App{
+    height: auto;
+  }
+  .content{
+    width: 90%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3px;
+  
+  
+  }
+  .overlay-show{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+  }
+
+}
 @media only screen and (max-width: 768px) {
+  .App{
+    height: auto;
+  }
+
+  .content{
+    width: 90%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 3px;
+  
+  
+  }
+  .overlay-show{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+  }
+
+  
 
 }
